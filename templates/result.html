@@ -1,0 +1,40 @@
+{% extends 'dependencies.html' %}
+
+{% block content %}
+<style>
+    body{
+        background-color: #212429;
+    }
+</style>
+
+<div class="container " style="margin: 2% 0 25% 20% ;">
+        
+    <div class="card-columns" style="padding: 10px;">
+        <div class="card" style="width: 110vh; border:1px black solid ; box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1), 0 6px 20px 0 rgba(255, 255, 255, 0.15);" >
+            <!-- <img class="card-img-top" src="http://kmit.in/emagazine/wp-content/uploads/2018/02/karnataka-results.jpg" alt="Card image cap"> -->
+            <div class="card-body">
+                <h5 class="card-title" style="text-align: center;">Name: {{request.user}}</h5>
+                <h5 class="card-title" style="text-align: center; font-weight: 300; font-size: 2.5vh;">Email: {{request.user.email}}</h5>
+                <h5 class="card-title" style="text-align: center; font-weight: 500;">GRIT SCORE: {{marks}}/85</h5>
+                <hr>
+                <p class="card-text" style="font-size: 1.8vh;" >Grit is frequently defined as a non-cognitive human tendency to engage in goal-directed action. Gritty individuals tend to be “less talented” in cognitive ability tests  but are high in perseverance and passion for long-term goals . Grit is goal-directed resilience. Gritty individuals will bounce back and maintain normalcy from the challenges and setbacks in their path to goal achievement. </p>
+                <hr>
+                <h5 class="card-title" style="font-size: 3vh;">Percentage: {{percent}}%</h5>
+                <i class="card-text" style="font-size: 1.7vh;">Time Taken: {{time}} seconds</i>
+                <p class="card-text" style="margin-top: 2%;">The psychometric measure developed has three factors, Perseverance-Commitment (PC), Interest-Passion (IP), and Goal-directed Resilience (GR)
+                    through a series of five studies</p>
+                <h6 class="card-text">GR Score: {{GR}}/20</h6>
+                <h6 class="card-text">PC Score: {{PC}}/40</h6>
+                <h6 class="card-text">IP Score: {{IP}}/25</h6>
+                <p class="card-text">Total questions: {{total}}</p>
+                <h5 class="card-title">GRIT GRADE : {{grade}}</h5>
+                <h5 class="card-text">WORK PROFILE SUITABILITY: {{prof}}</h5>
+                <hr>
+                <i style="font-size: 1.5vh; color: red;">*Please consider Official consultation with these Results</i>
+            </div>
+        </div>
+    </div>
+    <a href="{% url 'user_pdf_view' %}" target="_blank"><button class="btn btn-primary">Download pdf</button></a>
+</div>
+
+{% endblock %}

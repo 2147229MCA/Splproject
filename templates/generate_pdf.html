@@ -1,0 +1,33 @@
+{% extends 'dependencies.html' %}
+
+{% block content %}
+
+<div class="container ">
+        
+    <div class="card-columns" style="padding: 10px;">
+        <div class="card" style="width: 110vh;">
+            <!-- <img class="card-img-top" src="http://kmit.in/emagazine/wp-content/uploads/2018/02/karnataka-results.jpg" alt="Card image cap"> -->
+            <div class="card-body">
+                <h5 class="card-title" style="text-align: center;">Name: {{Name}}</h5>
+                <h5 class="card-title" style="text-align: center;">Email: {{Email}}</h5>
+                <h5 class="card-title" style="text-align: center;" >GRIT SCORE: {{marks}}/85</h5>
+                <p class="card-text">Grit is frequently defined as a non-cognitive human tendency to engage in goal-directed action. Gritty individuals tend to be “less talented” in cognitive ability tests  but are high in perseverance and passion for long-term goals . Grit is goal-directed resilience. Gritty individuals will bounce back and maintain normalcy from the challenges and setbacks in their path to goal achievement. </p>
+                <h5 class="card-title">Percentage: {{percent}}%</h5>
+                <p class="card-text">Time Taken: {{time}} seconds</p>
+                <p class="card-text">The psychometric
+                    measure developed has three factors, Perseverance-Commitment (PC), Interest-Passion (IP), and Goal-directed Resilience (GR)
+                    through a series of five studies</p>
+                <p class="card-text">GR Score: {{GR}}/20</p>
+                <p class="card-text">PC Score: {{PC}}/40</p>
+                <p class="card-text">IP Score: {{IP}}/25</p>
+                <p class="card-text">Total questions: {{total}}</p>
+                <h5 class="card-title">GRIT GRADE {{grade}}</h5>
+                <p class="card-text">WORK PROFILE SUITABILITY: {{prof}}</p>
+                <h5>Please consider Official consultation with these Results</h5>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
